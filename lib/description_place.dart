@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class DescriptionPlace extends StatelessWidget {
+  String namePlace;
+  int stars;
+  String descriptionPlace;
+
+  DescriptionPlace(this.namePlace, this.stars, this.descriptionPlace);
+
   @override
   Widget build(BuildContext context) {
 
@@ -16,7 +23,31 @@ class DescriptionPlace extends StatelessWidget {
       ),
     );
 
-    final title_stars = Row(
+    final starHalf = Container(
+      margin: EdgeInsets.only(
+        top: 323.0,
+        right: 3.0
+      ),
+
+      child: Icon(
+        Icons.star_half,
+        color: Color(0xFFf2C611)
+      ),
+    );
+
+    final starEmpty = Container(
+      margin: EdgeInsets.only(
+        top: 323.0,
+        right: 3.0
+      ),
+
+      child: Icon(
+        Icons.star_border,
+        color: Color(0xFFf2C611)
+      ),
+    );
+
+    final titleStars = Row(
       children: <Widget>[
         Container(
           margin: EdgeInsets.only(
@@ -26,7 +57,7 @@ class DescriptionPlace extends StatelessWidget {
           ),
 
           child: Text(
-            "Duwili Ella",
+            namePlace,
             style: TextStyle(
               fontSize: 30.0,
               fontWeight: FontWeight.w900,
@@ -39,8 +70,8 @@ class DescriptionPlace extends StatelessWidget {
             star,
             star,
             star,
-            star,
-            star,
+            starHalf,
+            starEmpty,
           ],
         ),
       ],
@@ -54,10 +85,11 @@ class DescriptionPlace extends StatelessWidget {
       ),
 
       child: Text(
-        "Lorem ipsum taquicual pim pam lorem ipsum taquicual pim pam lorem ipsum taquicual pim pam lorem ipsum taquicual pim pam lorem",
+        descriptionPlace,
         style: TextStyle(
+          fontFamily: "Lato",
           fontSize: 16.0,
-          fontWeight: FontWeight.w300,
+          fontWeight: FontWeight.w400,
           color: Color(0xFF56575a)
         ),
       ),
@@ -65,7 +97,7 @@ class DescriptionPlace extends StatelessWidget {
 
     return Column(
       children: <Widget>[
-        title_stars,
+        titleStars,
         description
       ],
     );
