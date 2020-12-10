@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:platzi_trips_app/star.dart';
+import 'package:platzi_trips_app/star_empty.dart';
+import 'package:platzi_trips_app/star_half.dart';
 
-// ignore: must_be_immutable
 class DescriptionPlace extends StatelessWidget {
   String namePlace;
   int stars;
@@ -11,42 +13,6 @@ class DescriptionPlace extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    final star = Container(
-      margin: EdgeInsets.only(
-        top: 323.0,
-        right: 3.0
-      ),
-
-      child: Icon(
-        Icons.star,
-        color: Color(0xFFf2C611)
-      ),
-    );
-
-    final starHalf = Container(
-      margin: EdgeInsets.only(
-        top: 323.0,
-        right: 3.0
-      ),
-
-      child: Icon(
-        Icons.star_half,
-        color: Color(0xFFf2C611)
-      ),
-    );
-
-    final starEmpty = Container(
-      margin: EdgeInsets.only(
-        top: 323.0,
-        right: 3.0
-      ),
-
-      child: Icon(
-        Icons.star_border,
-        color: Color(0xFFf2C611)
-      ),
-    );
-
     final titleStars = Row(
       children: <Widget>[
         Container(
@@ -55,7 +21,6 @@ class DescriptionPlace extends StatelessWidget {
             left: 20.0,
             right: 20.0,
           ),
-
           child: Text(
             namePlace,
             style: TextStyle(
@@ -67,11 +32,11 @@ class DescriptionPlace extends StatelessWidget {
         ),
         Row(
           children: <Widget>[
-            star,
-            star,
-            star,
-            starHalf,
-            starEmpty,
+            Star(323, 3),
+            Star(323, 3),
+            Star(323, 3),
+            StarHalf(323, 3),
+            StarEmpty(323, 3),
           ],
         ),
       ],
@@ -83,7 +48,6 @@ class DescriptionPlace extends StatelessWidget {
         right: 20.0,
         left: 20.0,
       ),
-
       child: Text(
         descriptionPlace,
         style: TextStyle(
