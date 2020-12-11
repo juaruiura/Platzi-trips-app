@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:platzi_trips_app/star.dart';
-import 'package:platzi_trips_app/star_empty.dart';
-import 'package:platzi_trips_app/star_half.dart';
 
 class Review extends StatelessWidget {
   String name;
@@ -46,17 +44,18 @@ class Review extends StatelessWidget {
 
     final userStars = Row(
       children: <Widget>[
-        Star(3, 3),
-        Star(3, 3),
-        Star(3, 3),
-        StarHalf(3, 3),
-        StarEmpty(3, 3),
+        Star(3, 3, 14),
+        Star(3, 3, 14),
+        Star(3, 3, 14),
+        Star.half(3, 3, 14),
+        Star.empty(3, 3, 14),
       ],
     );
 
     final userInfo = Container(
       margin: EdgeInsets.only(
         left: 20.0,
+        right: 5.0,
       ),
       child: Text(
         info,
@@ -100,11 +99,16 @@ class Review extends StatelessWidget {
       ],
     );
 
-    return Row(
-      children: <Widget>[
-        photo,
-        Expanded(child: userReview)
-      ],
+    return Container(
+      margin: EdgeInsets.only(
+        bottom: 10.0,
+      ),
+      child: Row(
+        children: <Widget>[
+          photo,
+          Expanded(child: userReview)
+        ],
+      )
     );
   }
 }

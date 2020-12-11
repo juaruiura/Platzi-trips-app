@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:platzi_trips_app/gradient_back.dart';
 import 'description_place.dart';
 import 'review_list.dart';
 
@@ -14,14 +15,15 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: Scaffold(
-        appBar: AppBar(
-          title: Text("Hola Ratón Sin Cola"),
-          centerTitle: true,
-        ),
-        body: Column (
+        body: Stack(
           children: <Widget>[
-            new DescriptionPlace("Bahamas", 4, "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."),
-            new ReviewList(),
+            ListView (
+              children: <Widget>[
+                new DescriptionPlace("Bahamas", 4, "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."),
+                new ReviewList(),
+              ],
+            ),
+            GradientBack(),
           ],
         )
       ),

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:platzi_trips_app/star.dart';
-import 'package:platzi_trips_app/star_empty.dart';
-import 'package:platzi_trips_app/star_half.dart';
 
 class DescriptionPlace extends StatelessWidget {
   String namePlace;
@@ -32,11 +30,11 @@ class DescriptionPlace extends StatelessWidget {
         ),
         Row(
           children: <Widget>[
-            Star(323, 3),
-            Star(323, 3),
-            Star(323, 3),
-            StarHalf(323, 3),
-            StarEmpty(323, 3),
+            Star(323, 3, 24),
+            Star(323, 3, 24),
+            Star(323, 3, 24),
+            Star.half(323, 3, 24),
+            Star.empty(323, 3, 24),
           ],
         ),
       ],
