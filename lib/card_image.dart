@@ -6,7 +6,7 @@ class CardImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final card = Container(
+    return Container(
       height: 350.0,
       width: 250.0,
       margin: EdgeInsets.only(
@@ -29,7 +29,5 @@ class CardImage extends StatelessWidget {
         ]
       ),
     );
-
-    return card;
   }
 }
