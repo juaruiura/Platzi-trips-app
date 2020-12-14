@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:platzi_trips_app/floating_action_button_green.dart';
 
 class CardImage extends StatelessWidget {
   String pathImage = "assets/img/beach.jpg";
@@ -6,7 +7,7 @@ class CardImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    final card = Container(
       height: 350.0,
       width: 250.0,
       margin: EdgeInsets.only(
@@ -28,6 +29,14 @@ class CardImage extends StatelessWidget {
           )
         ]
       ),
+    );
+
+    return Stack(
+      alignment: Alignment(0.9, 1.1),
+      children: <Widget>[
+        card,
+        FloatingActionButtonGreen(),
+      ],
     );
   }
 }
