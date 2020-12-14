@@ -4,7 +4,7 @@ import 'package:platzi_trips_app/star.dart';
 
 class DescriptionPlace extends StatelessWidget {
   String namePlace;
-  int stars;
+  double stars;
   String descriptionPlace;
 
   DescriptionPlace(this.namePlace, this.stars, this.descriptionPlace);
@@ -30,13 +30,7 @@ class DescriptionPlace extends StatelessWidget {
           ),
         ),
         Row(
-          children: <Widget>[
-            Star(323, 3, 24),
-            Star(323, 3, 24),
-            Star(323, 3, 24),
-            Star.half(323, 3, 24),
-            Star.empty(323, 3, 24),
-          ],
+          children: Star.starsBuilder(stars, 323, 3, 24),
         ),
       ],
     );
@@ -67,5 +61,4 @@ class DescriptionPlace extends StatelessWidget {
       ],
     );
   }
-
 }

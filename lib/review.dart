@@ -4,10 +4,11 @@ import 'package:platzi_trips_app/star.dart';
 class Review extends StatelessWidget {
   String name;
   String info;
+  double stars;
   String comment;
   String pathImage;
 
-  Review(this.name, this.info, this.comment, this.pathImage);
+  Review(this.name, this.info, this.stars, this.comment, this.pathImage);
 
   @override
   Widget build(BuildContext context) {
@@ -43,13 +44,7 @@ class Review extends StatelessWidget {
     );
 
     final userStars = Row(
-      children: <Widget>[
-        Star(3, 3, 14),
-        Star(3, 3, 14),
-        Star(3, 3, 14),
-        Star.half(3, 3, 14),
-        Star.empty(3, 3, 14),
-      ],
+      children: Star.starsBuilder(stars, 3, 3, 14)
     );
 
     final userInfo = Container(

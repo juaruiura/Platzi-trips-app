@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:platzi_trips_app/header_appbar.dart';
-import 'description_place.dart';
-import 'review_list.dart';
+import 'package:platzi_trips_app/platzi_trips.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  String loremipsum = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.";
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,19 +13,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Scaffold(
-        body: Stack(
-          children: <Widget>[
-            ListView (
-              children: <Widget>[
-                new DescriptionPlace("Bahamas", 4, "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."),
-                new ReviewList(),
-              ],
-            ),
-            HeaderAppBar(),
-          ],
-        )
-      ),
+      home: PlatziTrips(),
     );
   }
 }

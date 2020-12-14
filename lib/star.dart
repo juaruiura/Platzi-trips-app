@@ -51,4 +51,18 @@ class Star extends StatelessWidget {
       ),
     );
   }
+
+  static List<Widget> starsBuilder(double score, double topMargin, double rightMargin, double size) {
+    List<Widget> stars = [];
+    for (var i = 1; i <= 5; i++) {
+      if(i <= score){
+        stars.add(Star(topMargin, rightMargin, size));
+      } else if ((i - score) <= 0.5){
+        stars.add(Star.half(topMargin, rightMargin, size));
+      } else {
+        stars.add(Star.empty(topMargin, rightMargin, size));
+      };
+    }
+    return stars;
+  }
 }

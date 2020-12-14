@@ -25,9 +25,9 @@ class ReviewList extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         reviewListHeader,
-        new Review("Iván Paquepicón", "1 review - 5 photos", "There is an amazing place in Sri Lanka", "assets/img/people.jpg"),
-        new Review("Eri Pileta", "2 reviews - 4 photos", "Mencantó Paquepicón, pero había niños bebiendo sin trabajá'", "assets/img/ann.jpg"),
-        new Review("Ohca' Unchivato", "4 reviews - 2 photos", "Vamo' a dejannos tonterías, déjense de buyeces", "assets/img/girl.jpg"),
+        new Review("Iván Paquepicón", "1 review - 5 photos", 4.25, "There is an amazing place in Sri Lanka", "assets/img/people.jpg"),
+        new Review("Eri Pileta", "2 reviews - 4 photos", 3.5, "Mencantó Paquepicón, pero había niños bebiendo sin trabajá'", "assets/img/ann.jpg"),
+        new Review("Ohca' Unchivato", "4 reviews - 2 photos", 2.75, "Vamo' a dejannos tonterías, déjense de buyeces", "assets/img/girl.jpg"),
       ],
     );
   }
